@@ -128,7 +128,6 @@
                     </links>
                 </configuration>
             </plugin>
-<<<<<<< HEAD
             <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
@@ -183,23 +182,7 @@
           </reportSet>
         </reportSets>
       </plugin>
-      <plugin>
-            <groupId>com.github.spotbugs</groupId>
-            <artifactId>spotbugs-maven-plugin</artifactId>
-            <version>4.5.3.0</version>
-            <configuration>
-                <includeFilterFile>spotbugs-security-include.xml</includeFilterFile>
-                <excludeFilterFile>spotbugs-security-exclude.xml</excludeFilterFile>
-                <plugins>
-                    <plugin>
-                        <groupId>com.h3xstream.findsecbugs</groupId>
-                        <artifactId>findsecbugs-plugin</artifactId>
-                        <version>1.10.1</version>
-                    </plugin>
-                </plugins>
-            </configuration>
-        </plugin>
-        <plugins>
+
     <plugin>
       <groupId>org.codehaus.mojo</groupId>
       <artifactId>versions-maven-plugin</artifactId>
@@ -215,93 +198,6 @@
       </reportSets>
     </plugin>
         
-=======
-            <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <version>3.2.0</version>
-        <configuration>
-          <artifactItems>
-            <artifactItem>
-              <groupId>[ groupId ]</groupId>
-              <artifactId>[ artifactId ]</artifactId>
-              <version>[ version ]</version>
-              <type>[ packaging ]</type>
-              <classifier> [classifier - optional] </classifier>
-              <overWrite>[ true or false ]</overWrite>
-              <outputDirectory>[ output directory ]</outputDirectory>
-              <includes>[ comma separated list of file filters ]</includes>
-              <excludes>[ comma separated list of file filters ]</excludes>
-            </artifactItem>
-          </artifactItems>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-pmd-plugin</artifactId>
-        <version>3.16.0</version>
-        <configuration>
-          <linkXref>true</linkXref>
-          <sourceEncoding>utf-8</sourceEncoding>
-          <minimumTokens>100</minimumTokens>
-          <targetJdk>1.5</targetJdk>
-          <excludes>
-            <exclude>**/*Bean.java</exclude>
-            <exclude>**/generated/*.java</exclude>
-          </excludes>
-          <excludeRoots>
-            <excludeRoot>target/generated-sources/stubs</excludeRoot>
-          </excludeRoots>
-        </configuration>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <report>pmd</report>
-              <report>cpd</report>
-            </reports>
-          </reportSet>
-          <reportSet>
-            <id>aggregate</id>
-            <inherited>false</inherited>
-            <reports>
-              <report>aggregate-pmd</report>
-              <report>aggregate-cpd</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
-      <plugin>
-            <groupId>com.github.spotbugs</groupId>
-            <artifactId>spotbugs-maven-plugin</artifactId>
-            <version>4.5.3.0</version>
-            <configuration>
-                <includeFilterFile>spotbugs-security-include.xml</includeFilterFile>
-                <excludeFilterFile>spotbugs-security-exclude.xml</excludeFilterFile>
-                <plugins>
-                    <plugin>
-                        <groupId>com.h3xstream.findsecbugs</groupId>
-                        <artifactId>findsecbugs-plugin</artifactId>
-                        <version>1.10.1</version>
-                    </plugin>
-                </plugins>
-            </configuration>
-        </plugin>
-        <plugins>
-    <plugin>
-      <groupId>org.codehaus.mojo</groupId>
-      <artifactId>versions-maven-plugin</artifactId>
-      <version>2.9.0</version>
-      <reportSets>
-        <reportSet>
-          <reports>
-            <report>dependency-updates-report</report>
-            <report>plugin-updates-report</report>
-            <report>property-updates-report</report>
-          </reports>
-        </reportSet>
-      </reportSets>
-    </plugin>
->>>>>>> 9ebee768528c6e3044bf57e7ed13041735dee1d5
         </plugins>
     </reporting>
 </project>
